@@ -135,6 +135,5 @@ inoremap <c-d> <esc>:wq <cr>
 nnoremap <c-x> <esc>:q! <cr> 
 inoremap <c-x> <esc>:q! <cr> 
 
-
 set undolevels=1000
 :color delek
