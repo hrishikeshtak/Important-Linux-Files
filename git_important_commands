@@ -1,0 +1,47 @@
+
+1.First install git
+	sudo apt-get install git -y
+	sudo apt-get install gitk -y
+
+2.Setting username
+	git config --global user.name "Hrishikesh"
+	git config --global user.email "hrishikeshtak@gmail.com"
+	git config --global core.editor "vim"
+	git config --list
+	git help <<command>>
+
+3.Create Directory and initialize
+	mkdir dir_name
+	git init
+	git add . ( or ) git add filename
+	git status
+
+4.Create Repository in https://github.com/hrishikeshtak/ and push files to github
+	git commit -m "first commit"
+	git remote add origin https://github.com/hrishikeshtak/repository.git
+	git push -u origin master
+
+5.To check diff
+	git diff 
+
+6.Pull your repository
+	git remote -v
+	git pull git_url
+
+7.Create branch
+	git branch branch_name or git checkout -b branch_name
+
+8.List all branch and shift to other branch
+	git branch -a
+	git checkout branch_name
+	git branch 
+
+9.Merge all branch
+	git branch --merged
+
+
+10.Remove file from Repository
+	git rm file_name
+	git commit -m "remove file"
+	git push origin branch_name
+
