@@ -120,19 +120,21 @@ inoremap <F8> <Esc> 8gt
 inoremap <F9> <Esc> 9gt
 inoremap <C-t> <Esc>:tabnew
 
+
 " To save the File
 nnoremap <c-a> <esc>:w <cr> 
 inoremap <c-a> <esc>:w <cr> 
+
 
 " To Save & exit the File
 nnoremap <c-d> <esc>:wq <cr>
 inoremap <c-d> <esc>:wq <cr>
 
+
 " To quit the File
 nnoremap <c-x> <esc>:q! <cr> 
 inoremap <c-x> <esc>:q! <cr> 
 
-" To comment region
 
 set undolevels=1000
 :color delek
