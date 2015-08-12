@@ -95,6 +95,7 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
 "For controlling tabs
 inoremap <C-Left> <Esc>:tabprevious<CR>
 inoremap <C-Right> <Esc>:tabnext<CR>
@@ -120,18 +121,31 @@ inoremap <F8> <Esc> 8gt
 inoremap <F9> <Esc> 9gt
 inoremap <C-t> <Esc>:tabnew
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c012ae2be1586c14c55ea5959b098f74d9c53b11
 " To save the File
 nnoremap <c-a> <esc>:w <cr> 
 inoremap <c-a> <esc>:w <cr> 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c012ae2be1586c14c55ea5959b098f74d9c53b11
 " To Save & exit the File
 nnoremap <c-d> <esc>:wq <cr>
 inoremap <c-d> <esc>:wq <cr>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c012ae2be1586c14c55ea5959b098f74d9c53b11
 " To quit the File
 nnoremap <c-x> <esc>:q! <cr> 
 inoremap <c-x> <esc>:q! <cr> 
 
+<<<<<<< HEAD
 " To comment region
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
@@ -151,3 +165,7 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 set undolevels=1000
 :color delek
 
+=======
+set undolevels=1000
+:color delek
+>>>>>>> c012ae2be1586c14c55ea5959b098f74d9c53b11
