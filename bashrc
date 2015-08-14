@@ -113,6 +113,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH=:$PATH:/home/hrishi/.eclipse/org.eclipse.platform_4.4.2_1473617060_linux_gtk_x86_64
+
 
 # For Git 
 parse_git_dirty() {
@@ -137,3 +139,7 @@ else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
+
+
+# To show only one current directory , not the full path
+PROMPT_DIRTRIM=1
