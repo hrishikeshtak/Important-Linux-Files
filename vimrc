@@ -21,7 +21,6 @@ set nocompatible
 set dictionary=/usr/share/dict/words
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-set number
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
@@ -120,15 +119,15 @@ inoremap <F8> <Esc> 8gt
 inoremap <F9> <Esc> 9gt
 inoremap <C-t> <Esc>:tabnew
 
-" To save the File
+" To save the File press ctrl + a
 nnoremap <c-a> <esc>:w <cr> 
 inoremap <c-a> <esc>:w <cr> 
 
-" To Save & exit the File
+" To Save & exit the File press ctrl + d
 nnoremap <c-d> <esc>:wq <cr>
 inoremap <c-d> <esc>:wq <cr>
 
-" To quit the File
+" To quit the File press ctrl + x
 nnoremap <c-x> <esc>:q! <cr> 
 inoremap <c-x> <esc>:q! <cr> 
 
@@ -140,15 +139,26 @@ autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
-
-" To comment the block
-" command ,cc
+" To comment the block press ,cc 
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 
-" To uncomment the block
-" command ,cu
+" To uncomment the block press ,cu
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 set undolevels=1000
 :color delek
+
+" Extra Features
+syntax enable  " enable syntax processing
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
 
