@@ -14,7 +14,7 @@ Important-Linux-Files
     
     
 4.vimrc :
-    Make vim editor inetractive ,
+   The vimrc file contains optional runtime configuration settings to initialize Vim when it starts ,
     Path = ~/.vimrc
     
 5.bashrc :
