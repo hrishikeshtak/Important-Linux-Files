@@ -1,6 +1,6 @@
 ## CRUNCHBANG
 ## Compatible with Debian Wheezy, but use at your own risk.
-deb http://packages.crunchbang.org/waldorf waldorf main
+# deb http://packages.crunchbang.org/waldorf waldorf main
 # deb-src http://packages.crunchbang.org/waldorf waldorf main
 
 ## DEBIAN
