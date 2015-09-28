@@ -113,8 +113,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b143a4be51935e56cccb020b09d68fcb0189231
 # For Git 
 parse_git_dirty() {
 	if [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]]; then

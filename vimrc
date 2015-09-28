@@ -1,4 +1,3 @@
-
 if v:progname =~? "evim"
   finish
 endif
@@ -134,7 +133,7 @@ noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<C
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 set undolevels=1000
-:color delek
+
 
 " Extra Features
 syntax enable  " enable syntax processing
