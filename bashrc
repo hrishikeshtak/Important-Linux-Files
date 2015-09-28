@@ -113,7 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=:$PATH:/home/hrishi/.eclipse/org.eclipse.platform_4.4.2_1473617060_linux_gtk_x86_64
 
 
 # For Git 
