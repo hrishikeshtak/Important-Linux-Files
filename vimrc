@@ -134,7 +134,6 @@ noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<C
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 set undolevels=1000
-:color delek
 
 " Extra Features
 syntax enable  " enable syntax processing
@@ -148,5 +147,7 @@ set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-
-
+" set background=dark
+" To save backup files in /tmp directory
+set backupdir=/tmp,.
+set directory=/tmp,.
