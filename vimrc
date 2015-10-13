@@ -134,7 +134,6 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 
 set undolevels=1000
 
-
 " Extra Features
 syntax enable  " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
@@ -147,5 +146,7 @@ set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-
-
+" set background=dark
+" To save backup files in /tmp directory
+set backupdir=/tmp,.
+set directory=/tmp,.
