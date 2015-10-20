@@ -113,6 +113,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH=:$PATH:/home/hrishi/.eclipse/org.eclipse.platform_4.4.2_1473617060_linux_gtk_x86_64
+
+
 # For Git 
 parse_git_dirty() {
 	if [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]]; then
@@ -131,7 +134,7 @@ parse_git_branch() {
 color_prompt=yes
 # Add git branch if its present to PS1
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
@@ -140,3 +143,7 @@ unset color_prompt force_color_prompt
 
 # To show only one current directory , not the full path
 PROMPT_DIRTRIM=1
+# Set Title according to current directory ( Full Path )
+PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+# Set Title according to current directory ( only current directory )
+#PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
