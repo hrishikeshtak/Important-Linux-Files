@@ -107,27 +107,27 @@ inoremap <F9> <Esc> 9gt
 inoremap <C-t> <Esc>:tabnew
 
 " To save the File press ctrl + a
-nnoremap <c-a> <esc>:w <cr> 
-inoremap <c-a> <esc>:w <cr> 
+nnoremap <c-a> <esc>:w! <cr> 
+inoremap <c-a> <esc>:w! <cr> 
 
 " To Save & exit the File press ctrl + d
-nnoremap <c-d> <esc>:wq <cr>
-inoremap <c-d> <esc>:wq <cr>
+nnoremap <c-d> <esc>:wq! <cr>
+inoremap <c-d> <esc>:wq! <cr>
 
-" To quit the File press ctrl + x
-nnoremap <c-x> <esc>:q! <cr> 
-inoremap <c-x> <esc>:q! <cr> 
+" To quit the File press ctrl + c
+nnoremap <c-c> <esc>:q! <cr> 
+inoremap <c-c> <esc>:q! <cr> 
 
 " To comment region
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+autocmd FileType sh,ruby,python,yml   let b:comment_leader = '# '
 autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
 " To comment the block press ,cc 
-noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> ,cc :<C-B>silent <C-E>s/^#*/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 
 " To uncomment the block press ,cu
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
