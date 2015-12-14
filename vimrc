@@ -46,15 +46,21 @@ autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
+
 " To comment the block press ,cc 
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 
 " To uncomment the block press ,cu
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-set undolevels=1000
+" To disable number
+nnoremap ,no <esc>:set nonumber <cr>
+
+" To enable number
+nnoremap ,set <esc>:set number <cr>
 
 " Extra Features
+set undolevels=1000
 syntax enable  " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
