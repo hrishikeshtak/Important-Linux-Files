@@ -85,7 +85,14 @@ set smartcase
 set background=dark
 syntax on
 " colorscheme distinguished
-" colorscheme holokoi
-" colorscheme base16-tomorrow
-colorscheme railscasts
+" colorscheme railscasts
+" colorscheme pencil
 " colorscheme lucius
+" colorscheme mayansmoke
+" colorscheme adobe
+" colorscheme adrian
+" colorscheme advantage
+" colorscheme advantage
+" colorscheme ansi_blows
+" colorscheme billw
+" colorscheme blacklight
