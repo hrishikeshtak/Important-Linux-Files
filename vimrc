@@ -72,7 +72,6 @@ set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-set background=dark
 set backupdir=/tmp,		" To save backup files in /tmp directory.
 set directory=/tmp,.
 set expandtab	" expand tabs into spaces
@@ -82,3 +81,11 @@ filetype indent plugin on
 set modeline
 set ignorecase
 set smartcase
+" colorscheme
+set background=dark
+syntax on
+" colorscheme distinguished
+" colorscheme holokoi
+" colorscheme base16-tomorrow
+colorscheme railscasts
+" colorscheme lucius

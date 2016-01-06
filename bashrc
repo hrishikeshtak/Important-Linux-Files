@@ -147,3 +147,4 @@ PROMPT_DIRTRIM=1
 PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 # Set Title according to current directory ( only current directory )
 #PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+export TERM=xterm-256color
