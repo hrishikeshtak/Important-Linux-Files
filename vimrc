@@ -59,6 +59,8 @@ nnoremap ,no <esc>:set nonumber <cr>
 " To enable number
 nnoremap ,set <esc>:set number <cr>
 
+nnoremap ,sp <esc>:set paste <cr>
+
 " Extra Features
 set undolevels=1000
 syntax enable  " enable syntax processing
@@ -92,7 +94,8 @@ syntax on
 " colorscheme adobe
 " colorscheme adrian
 " colorscheme advantage
-" colorscheme advantage
 " colorscheme ansi_blows
 " colorscheme billw
 " colorscheme blacklight
+colorscheme monokai
+

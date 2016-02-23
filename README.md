@@ -16,7 +16,7 @@ Important-Linux-Files
 4.vimrc :
    The vimrc file contains optional runtime configuration settings to initialize Vim when it starts ,
     Location = ~/.vimrc
->VIM colorscheme : Extract **colors.tar.gz** to ~/.vim directory and add following line to ~/.bashrc
+>VIM colorscheme : copy **colors** directory to ~/.vim directory and add following line to ~/.bashrc
 >> export TERM=xterm-256color
 
 5.bashrc :
