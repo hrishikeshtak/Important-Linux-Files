@@ -21,3 +21,4 @@ Important-Linux-Files
 
 5.bashrc :
     Define interactive bash shell , this file contains interactive bash shell with git configuration ,
+
