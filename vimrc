@@ -99,3 +99,8 @@ syntax on
 " colorscheme blacklight
 colorscheme monokai
 
+" To activate sidebar
+nnoremap ,sb <esc>:NERDTree <cr>
+
+" Runtime Path Manipulation
+execute pathogen#infect()

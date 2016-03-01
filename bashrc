@@ -139,9 +139,10 @@ unset color_prompt force_color_prompt
 
 
 # To show only one current directory , not the full path
-PROMPT_DIRTRIM=1
+export PROMPT_DIRTRIM=1
 # Set Title according to current directory ( Full Path )
 PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 # Set Title according to current directory ( only current directory )
 #PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+# Enable vim colorscheme
 export TERM=xterm-256color
