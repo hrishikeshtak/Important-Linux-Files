@@ -61,6 +61,9 @@ nnoremap ,set <esc>:set number <cr>
 
 nnoremap ,sp <esc>:set paste <cr>
 
+" To remove whitespaces at the end of line
+nnoremap ,rw <esc>:%s/\s\+$//g <cr>
+
 " Extra Features
 set undolevels=1000
 syntax enable  " enable syntax processing
@@ -88,7 +91,7 @@ set background=dark
 syntax on
 " colorscheme distinguished
 " colorscheme railscasts
-" colorscheme pencil
+colorscheme pencil
 " colorscheme lucius
 " colorscheme mayansmoke
 " colorscheme adobe
@@ -97,10 +100,8 @@ syntax on
 " colorscheme ansi_blows
 " colorscheme billw
 " colorscheme blacklight
-colorscheme monokai
+" colorscheme monokai
 
 " To activate sidebar
 nnoremap ,sb <esc>:NERDTree <cr>
-
-" Runtime Path Manipulation
 execute pathogen#infect()
