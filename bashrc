@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# For Git 
+# For Git
 parse_git_dirty() {
 	if [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]]; then
 		echo "*"
@@ -146,3 +146,12 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 #PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 # Enable vim colorscheme
 export TERM=xterm-256color
+
+# function to set terminal title
+function set-title(){
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
